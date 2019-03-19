@@ -1,36 +1,32 @@
+<!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="Site.css">
+	<head>
+		<title>Kevin Farley</title>
+		<!--========Stylesheets========-->
+ 		<link rel="stylesheet" href="Assets/Css/main.css">
+		<!--==========Scripts==========-->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-<div ng-app="myEfolio" ng-controller="EPorfolioController">
-	<header class="top-container">
-		<p>
-			<h1 id="heading">Kevin Farley: Computer Engineer</h1>
-			<img class="circle-image" src="./Resources/gitpic.jpg"></img>
-		</p>
-		<div class="container">
-			<ul id="menu">
-				 <li><a href="#" ng-click="newSelection($event)" link='about'>About</a></li>
-				 <li><a href="#" ng-click="newSelection($event)" link='home' class='active-link'>Home</a>
-				 <li><a href="#" ng-click="newSelection($event)" link='contact'>Contact</a></li>
-			</ul>
-		</div>
-	</header>
+		<script src="Sources/sidebar.js"></script>
+	
+	</head>
 	<body>
-		<p>
-			<div class="main-content">
-				<div home-view class="fadeIn" ng-class="{ hidden: selected != 'home' }"></div>
-				<div contact-view class="fadeIn" ng-class="{ hidden: selected != 'contact' }"></div>
-				<div about-view class="fadeIn" ng-class="{ hidden: selected != 'about' }"></div>
+		<header id="sidebars">
+			<div class="sidebar">
+				<a onclick="toggle()"> &#9776; Kevin Farley</a>
+				<a>Home</a>
+				<a>About</a>
+				<a>Contact</a>
 			</div>
-		</p>
+			<div class="main">
+				<a class="toggleBtn" onclick="toggle()"> &#9776; Kevin Farley</a>
+			</div>
+		</header>
+		<div id="body">
+			<div class="container">
+				<h1>Kevin Farley</h1>
+				<small>Computer Generator</small>
+			</div>
+		</div>
 	</body>
-</div>
-
-<footer>
-	<p>Created by Kevin Farley: hosted by github pages, latest update: 9/15/2016</p>
-</footer>
-
-<script type="text/javascript" src="./Sources/jquery-1.11.3.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-<script type="text/javascript" src="./Sources/site.js"></script>
 </html>
